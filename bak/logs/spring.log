@@ -1,0 +1,6 @@
+2020-10-26 14:03:45.141  INFO 45952 --- [main] au.goflmate.App                          : Starting App v1.0 on DESKTOP-5D9BJHD with PID 45952 (D:\workspace\temp\landPage\bak\landPage-pro.jar started by yudian in D:\workspace\temp\landPage\bak)
+2020-10-26 14:03:45.144  INFO 45952 --- [main] au.goflmate.App                          : The following profiles are active: test
+2020-10-26 14:03:46.493  INFO 45952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-26 14:03:46.494  INFO 45952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2020-10-26 14:03:46.573  INFO 45952 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/Landpage]      : Initializing Spring embedded WebApplicationContext
+2020-10-26 14:03:47.179  INFO 45952 --- [main] au.goflmate.App                          : Started App in 2.331 seconds (JVM running for 2.666)
