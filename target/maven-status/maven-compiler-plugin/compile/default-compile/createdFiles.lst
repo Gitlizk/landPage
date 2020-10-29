@@ -1,0 +1,9 @@
+au\goflmate\Result.class
+au\goflmate\Code.class
+au\goflmate\LandPageController.class
+au\goflmate\Md5.class
+au\goflmate\filter\CORSFilter.class
+au\goflmate\ApiHelper.class
+au\goflmate\GolfConst.class
+au\goflmate\App.class
+au\goflmate\ResponseResult.class

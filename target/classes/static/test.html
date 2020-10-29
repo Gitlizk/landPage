@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/Landpage/js/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <div class="home">
+        <img class="head-img" :src="headImg" alt="">
+        <p class="user-name">{{userName}}</p>
+        <p class="invite-tip">invited you to download</p>
+        <div class="coach" >
+            <input type="radio" name="role" value="1" v-model="role" style="display: none">
+
+            <button :class="btn1" @click="choseCoach"></button>
+        </div>
+        <div class="student" >
+            <input type="radio" name="role" value="0" v-model="role"  style="display: none">
+            <button :class="btn2" @click="choseStudent"></button>
+        </div>
+        <div class="home-btn" @click="roleChoose()">
+            <span style="margin-left: 100px">Next</span>
+        </div>
+
+    </div>
+</div>
+<script>
+
+    var  app=new Vue({
+        el:'#app',
+        data: {
+            userName: '',
+            headImg: '',
+            role: '1',
+            btn1:'selectOff',
+            btn2:'selectOff'
+        },
+        methods: {
+            roleChoose: function f() {
+                alert(this.role);
+            },
+            choseCoach:function(){
+                this.role=1;
+                this.btn1='selectOn';
+                this.btn2='selectOff';
+            },
+            choseStudent:function(){
+                this.role=0;
+                this.btn1='selectOff';
+                this.btn2='selectOn';
+            }
+
+        },
+        created() {
+            this.headImg ='/Landpage/img/head-img-default.jpg';
+        }
+    });
+
+</script>
+<style scoped>
+
+
+    .home{
+        background: url('http://genshuixue-public.oss-cn-beijing.aliyuncs.com/umeng/zhanqun/20201013/home-bg.png') no-repeat;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 203px;
+    }
+    .home .head-img {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 100%;
+    }
+    .home .user-name {
+        font-size: 18px;
+        font-family: HelveticaNeue;
+        color: #000000;
+        line-height: 18px;
+        margin: 16px 0 10px 0;
+    }
+    .home .invite-tip {
+        font-size: 16px;
+        font-family: HelveticaNeue;
+        color: #98A2AD;
+        line-height: 22px;
+        margin-bottom: 50px;
+    }
+    .home .home-btn {
+        margin: 0 auto 24px auto;
+        width: 330px;
+        height: 46px;
+        line-height: 46px;
+        border-radius: 15px;
+        border: 1px solid #00BA63;
+        color: #00BA63;
+        font-size: 18px;
+        font-family: HelveticaNeue;
+    }
+    .home .home-btn.active-btn {
+        background: #00BA63;
+        border: 1px solid #00BA63;
+        color: #fff;
+    }
+    .coach{
+        background: url("/Landpage/img/coach.png") no-repeat;
+        margin: 0 auto 24px auto;
+        width: 330px;
+        height: 80px;
+        line-height: 46px;
+        border-radius: 15px;
+        border: 1px solid #00BA63;
+        color: #00BA63;
+        font-size: 18px;
+        background-size: 55%;
+        font-family: HelveticaNeue;
+    }
+    .student{
+        background: url("/Landpage/img/student.png") no-repeat;
+        margin: 0 auto 24px auto;
+        width: 330px;
+        height: 80px;
+        line-height: 46px;
+        border-radius: 15px;
+        border: 1px solid #00BA63;
+        color: #00BA63;
+        font-size: 18px;
+        background-size: 55%;
+        font-family: HelveticaNeue;
+    }
+    .selectOn{
+        background: url("/Landpage/img/Select@3x.png") no-repeat;
+        background-size: 100%;
+        width:8vw;
+        height: 8vh;
+        background-color: #00BA63;
+        margin-left: 40vh;
+        margin-top: 5vh;
+        border-radius: 15px;
+    }
+    .selectOff{
+        background: url("/Landpage/img/Select@2x.png") no-repeat;
+        background-size: 100%;
+        width: 8vw;
+        height: 8vh;
+        margin-left: 40vh;
+        margin-top: 5vh;
+        border-radius: 15px;
+    }
+</style>
+</body>
+</body>
+</html>
